@@ -14,4 +14,8 @@
     public void AddCommand(Commands command) {
         Commands.Add(command.ToString());
     }
+
+    public void AddCommand(string command) {
+        Commands.Add(command);
+    }
 }

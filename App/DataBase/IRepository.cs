@@ -1,7 +1,4 @@
-﻿
-namespace App.DataBase; 
-
-public interface IRepository {
+﻿public interface IRepository {
    void AddAnimal(Animal inAnimal);
    int GetLastId();
    List<Animal> GetAnimalList();

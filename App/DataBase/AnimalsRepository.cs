@@ -1,10 +1,10 @@
 ﻿using System.Data;
-using App.DataBase;
+
 namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.DataBase {
     public class AnimalsRepository: IRepository {
         private string _url;
-        private readonly Counter _count;
-        private readonly List<List<string>> _data;
+        private Counter _count;
+        private List<List<string>> _data;
 
         private AnimalsRepository(string url) {
             _url = url;
@@ -33,7 +33,7 @@ namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.DataBase {
         private void NewMethod(Animal inAnimal, List<string> temp, string className) {
             int tempNum = _count.GetNumber();
             string commands =
-                inAnimal.Commands.Commands.Aggregate(string.Empty, (current, command) => current + (command + " "));
+                inAnimal.PetCommands.Commands.Aggregate(string.Empty, (current, command) => current + (command + " "));
             temp.Add($"ID{tempNum}");
             temp.Add(className);
             temp.Add(tempNum.ToString());
@@ -45,28 +45,94 @@ namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.DataBase {
         public int GetLastId() {
             int maxId = 0;
 
-            if (_data != null) {
-                foreach (List<string> animals in _data) {
-                    foreach (string fields in animals) {
-                        int temp;
-                        if (fields.Contains("ID")) {
-                            temp = int.Parse(fields.Replace("ID", string.Empty));
-                            if (temp > maxId) {
-                                maxId = temp;
-                            }
+            foreach (List<string> animals in _data) {
+                foreach (string fields in animals) {
+                    int temp;
+                    if (fields != null && fields.Contains("ID")) {
+                        temp = int.Parse(fields.Replace("ID", string.Empty));
+                        if (temp > maxId) {
+                            maxId = temp;
                         }
                     }
                 }
+            }
 
-                return maxId;
-            }
-            else {
-                throw new DataException("Отсуствует соединение с базой данных");
-            }
+            return maxId;
         }
 
         public List<Animal> GetAnimalList() {
-            throw new NotImplementedException();
+            List<Animal> result = new List<Animal>();
+            foreach (List<string> animal in _data) {
+                Animal tempAnimal;
+                switch (animal[1]) {
+                    case "cat":
+                        tempAnimal = new Cat(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                    
+                    case "dog":
+                        tempAnimal = new Dog(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                                        
+                    case "hamster":
+                        tempAnimal = new Hamster(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                    
+                    case "camel":
+                        tempAnimal = new Camel(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                                        
+                    case "donkey":
+                        tempAnimal = new Donkey(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                    
+                                                            
+                    case "horse":
+                        tempAnimal = new Horse(
+                            int.Parse(animal[0].Replace("ID", string.Empty)),
+                            DateTime.Parse(animal[3]));
+                        FillFields(tempAnimal, animal);
+
+                        result.Add(tempAnimal);
+                        break;
+                }
+            }
+            return result;
+        }
+
+        private static void FillFields(Animal tempAnimal, List<string> animal) {
+            tempAnimal.Number = int.Parse(animal[2]);
+            tempAnimal.Name = animal[4];
+            PetCommands petCommands = new PetCommands();
+            foreach (string command in animal[5].Split(" ")) {
+                petCommands.AddCommand(command);
+            }
+
+            tempAnimal.PetCommands = petCommands;
         }
     }
 }
