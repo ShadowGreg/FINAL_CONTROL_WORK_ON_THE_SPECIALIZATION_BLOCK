@@ -31,4 +31,7 @@ public abstract class Animal {
         }
         return output;
     }
+    public virtual void SayCatchphrase() {
+        throw new Exception("Пока не создал такого метода");
+    }
 }

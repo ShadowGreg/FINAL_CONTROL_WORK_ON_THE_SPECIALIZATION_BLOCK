@@ -60,6 +60,20 @@ namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.DataBase {
             return maxId;
         }
 
+        public List<string> GetAnimalsNumList() {
+            List<string> list = new List<string>();
+            foreach (List<string> animals in _data) {
+                foreach (string fields in animals) {
+                    
+                    if (fields != null && fields.Contains("ID")) {
+                        list.Add(fields.Replace("ID", string.Empty));
+                    }
+                }
+            }
+
+            return list;
+        }
+
         public List<Animal> GetAnimalList() {
             List<Animal> result = new List<Animal>();
             foreach (List<string> animal in _data) {

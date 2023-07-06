@@ -3,7 +3,7 @@
 public class Dog: Pet {
     public Dog(int id, DateTime birthDay): base(id, birthDay) { }
 
-    public void DogSay() {
+    public override void SayCatchphrase() {
         View.Print("Я говорю РРРР, Гав! Гав! ");
     }
 

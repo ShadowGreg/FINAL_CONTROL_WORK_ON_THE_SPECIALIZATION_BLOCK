@@ -17,17 +17,18 @@ public static class ViewText {
                                        NumSecond + " - Посмотреть всех животных\n" +
                                        NumThird + " - Выбрать животное по номеру\n";
 
+    public const string ForAnimalText = MinMenu + EXIT + "Выберите животное по номеру";
 
-    public const string CreateAnimalMenuText = MinMenu +
-                                               " - Выбрать класс животного\n" +
-                                               " - Посомтреть список команд животного\n" +
-                                               " - Обучить новым командам\n" +
-                                               " - Попросить животное сказать свою коронную фразу\n";
+    public const string CreateAnimalMenuText = MinMenu + EXIT +
+                                               NumFirst + " - Выбрать класс животного\n" +
+                                               NumSecond + " - Посомтреть список команд животного\n" +
+                                               NumThird + " - Обучить командам\n" +
+                                               NumFourth + " - Попросить животное сказать свою коронную фразу\n";
 
-    public const string AnimalMenuText = MinMenu +
-                                         "Цифра 1 - Посомтреть список команд животного\n" +
-                                         "Цифра 2 - Обучить новым командам\n" +
-                                         "Цифра 3 - Попросить животное сказать свою коронную фразу\n";
+    public const string AnimalMenuText = MinMenu + EXIT +
+                                         NumFirst + " - Посомтреть список команд животного\n" +
+                                         NumSecond + " - Обучить новым командам\n" +
+                                         NumThird + " - Попросить животное сказать свою коронную фразу\n";
 
     public const string AnimalCommandsMenuText = MinMenu +
                                                  "Цифра 1 - GO\n" +

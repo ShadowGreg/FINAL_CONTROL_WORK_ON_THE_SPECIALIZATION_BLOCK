@@ -11,7 +11,7 @@ public static class View {
         Console.WriteLine("\n********************************\n");
     }
 
-    private static void PrintStandardFrame(string inText) {
+    public static void PrintStandardFrame(string inText) {
         Console.WriteLine("\n********************************");
         Console.WriteLine(inText);
         Console.WriteLine("\n********************************");
