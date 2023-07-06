@@ -5,11 +5,15 @@
     <projectFile profileName="WorkerService1">WorkerService1/WorkerService1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e26a1ea5-04c7-41db-a0ef-159772ed007e" name="Changes" comment="обработал проверку получения классов начал создававть систему юзер интерфейса">
+    <list default="true" id="e26a1ea5-04c7-41db-a0ef-159772ed007e" name="Changes" comment="Добавил работу со стартовым меню">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controller/ProgramController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/ProgramController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/View/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pack_animal/Camel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pack_animal/Camel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pack_animal/Donkey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pack_animal/Donkey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pack_animal/Horse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pack_animal/Horse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pets/Cat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pets/Cat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pets/Dog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pets/Dog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Core/Pets/Hamster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Core/Pets/Hamster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/View/ViewText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/ViewText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +23,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/459b5cba13fc65ba87d9a46ab276a2a9b3c1125ef6bac57b7ca4b7ac70c0ad4c/TargetInvocationException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/workspace/FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK/App/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688557311968</updated>
-      <workItem from="1688557318184" duration="15512000" />
+      <workItem from="1688557318184" duration="17959000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1688557337937</created>
@@ -135,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688623421983</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил работу со стартовым меню">
+      <created>1688627230321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688627230321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +173,8 @@
     <MESSAGE value="add body of app" />
     <MESSAGE value="добавил функцию вызова из бд объектоа классов и описание животного" />
     <MESSAGE value="обработал проверку получения классов начал создававть систему юзер интерфейса" />
-    <option name="LAST_COMMIT_MESSAGE" value="обработал проверку получения классов начал создававть систему юзер интерфейса" />
+    <MESSAGE value="Добавил работу со стартовым меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил работу со стартовым меню" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

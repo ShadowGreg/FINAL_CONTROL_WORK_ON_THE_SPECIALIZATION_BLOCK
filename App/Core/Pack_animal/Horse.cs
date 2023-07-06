@@ -5,4 +5,8 @@ public class Horse: PackAnimal {
     public override void Pack_animalSey() {
         View.Print($"Я – маленькая лошадка {Name}, но стою очень много денег");
     }
+
+    public override string ToString() {
+        return "Жеребец/кобыла: \n" + base.ToString();
+    }
 }

@@ -6,4 +6,8 @@ public class Dog: Pet {
     public void DogSay() {
         View.Print("Я говорю РРРР, Гав! Гав! ");
     }
+
+    public override string ToString() {
+        return "Пёс/собака: \n" + base.ToString();
+    }
 }

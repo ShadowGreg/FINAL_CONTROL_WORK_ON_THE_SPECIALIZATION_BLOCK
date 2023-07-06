@@ -2,7 +2,13 @@
 
 public static class View {
     public static void Print(string item) {
-        Console.WriteLine(item);
+        PrintItems(item);
+    }
+
+    private static void PrintItems(string text) {
+        Console.WriteLine("\n********************************");
+        Console.WriteLine(text);
+        Console.WriteLine("\n********************************\n");
     }
 
     private static void PrintStandardFrame(string inText) {

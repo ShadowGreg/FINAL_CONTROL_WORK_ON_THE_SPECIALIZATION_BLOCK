@@ -9,4 +9,8 @@ public class Camel: PackAnimal {
                                            "Ел кусты да травку, пил два раза в год," + "\n" +
                                            "Но, собой доволен, жил он без забот." + "\n");
     }
+
+    public override string ToString() {
+        return "Верблюд/верблюдица: \n" + base.ToString();
+    }
 }

@@ -7,4 +7,8 @@ public class Cat:Pet {
     public void CatSay() {
         View.Print("Я чешу мурлычу. Муррррррррр....");
     }
+
+    public override string ToString() {
+        return "Кот/кошка: \n" + base.ToString();
+    }
 }

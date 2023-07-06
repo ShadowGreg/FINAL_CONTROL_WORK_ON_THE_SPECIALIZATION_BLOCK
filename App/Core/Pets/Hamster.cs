@@ -6,4 +6,8 @@ public class Hamster: Pet {
     public void HamsterSay() {
         View.Print("Я бегу по кругу уииии!");
     }
+
+    public override string ToString() {
+        return "Хомяк/хомячиха: \n" + base.ToString();
+    }
 }

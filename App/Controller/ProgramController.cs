@@ -1,15 +1,17 @@
-﻿namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.Controller;
+﻿using FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.DataBase;
+
+namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.Controller;
 
 public class ProgramController {
-    private string[] _checkWords = new string[]
+    private readonly string[] _checkWords = new string[]
     {
         "EXIT", "0", "1", "2", "3", "4", "5", "6", "7"
     };
 
-    private string _url;
+    private AnimalsRepository _repository;
 
     public ProgramController(string url) {
-        _url = url;
+        _repository = AnimalsRepository.GetConnection(url);
     }
 
     public void Run() {
@@ -35,13 +37,13 @@ public class ProgramController {
                     inText = "0";
                     break;
                 case "1":
-                    AddNewAnimal();
+                    inText = AddNewAnimal();
                     break;
                 case "2":
-                    PrintAllAnimals();
+                    inText = PrintAllAnimals();
                     break;
                 case "3":
-                    СhooseAnimal();
+                    inText = СhooseAnimal();
                     break;
             }
         }
@@ -52,15 +54,20 @@ public class ProgramController {
         return inText;
     }
 
-    private void СhooseAnimal() {
+    private string СhooseAnimal() {
         throw new NotImplementedException();
     }
 
-    private void PrintAllAnimals() {
-        throw new NotImplementedException();
+    private string PrintAllAnimals() {
+        List<Animal> animalList = _repository.GetAnimalList();
+        foreach (Animal item in animalList) {
+            View.View.Print(item.ToString());
+        }
+        return "0";
     }
 
-    private void AddNewAnimal() {
+    private string AddNewAnimal() {
+        string? inText = Console.ReadLine();
         throw new NotImplementedException();
     }
 }

@@ -25,9 +25,9 @@ public abstract class Animal {
         string output = new StringBuilder($"По имени {Name}" + "\n" +
                                           $"С порядковым номером {Number}" + "\n" +
                                           $"Предположительной даты рождения {DateOfBirth:dd/MM/yyyy}" + "\n"+
-                                          $"Знает команды:").ToString();
+                                          $"Знает команды:\n").ToString();
         foreach (string command in PetCommands.Commands) {
-            output += command + "\n";
+            output += " -" + command + "\n";
         }
         return output;
     }

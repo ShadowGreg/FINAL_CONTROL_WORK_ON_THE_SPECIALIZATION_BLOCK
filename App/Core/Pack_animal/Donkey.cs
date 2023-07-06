@@ -6,4 +6,8 @@ public class Donkey: PackAnimal {
     public override void Pack_animalSey() {
         View.Print($"Я – маленький ослик {Name}, и мне живётскя не сладко");
     }
+
+    public override string ToString() {
+        return "Осёл/ослица: \n" + base.ToString();
+    }
 }
