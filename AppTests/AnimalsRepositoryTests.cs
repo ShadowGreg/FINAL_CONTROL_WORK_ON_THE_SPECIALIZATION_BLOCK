@@ -29,4 +29,17 @@ public class AnimalsRepositoryTests {
         // Assert
         Assert.AreEqual(expected, actual);
     }
+    
+    [Test]
+    public void GetAnimalList_Test() {
+        // Arrange
+        AnimalsRepository repo = AnimalsRepository.GetConnection("");
+        string expected = "По имени Milka\nС порядковым номером 1\nПредположительной даты рождения 05.07.2023\nЗнает команды:RUN_AWAY\n";
+
+        // Act
+        string actual = repo.GetAnimalList()[0].ToString();
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
 }

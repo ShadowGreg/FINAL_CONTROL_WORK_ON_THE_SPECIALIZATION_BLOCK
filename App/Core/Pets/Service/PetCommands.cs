@@ -1,4 +1,6 @@
-﻿public class PetCommands {
+﻿using FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.View;
+
+public class PetCommands {
 
     public PetCommands() {
         Commands = new List<string>();

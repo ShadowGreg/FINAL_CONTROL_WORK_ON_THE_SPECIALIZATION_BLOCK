@@ -1,4 +1,6 @@
-﻿public class Donkey: PackAnimal {
+﻿using FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.View;
+
+public class Donkey: PackAnimal {
     public Donkey(int id, DateTime birthDay): base(id, birthDay) { }
 
     public override void Pack_animalSey() {
