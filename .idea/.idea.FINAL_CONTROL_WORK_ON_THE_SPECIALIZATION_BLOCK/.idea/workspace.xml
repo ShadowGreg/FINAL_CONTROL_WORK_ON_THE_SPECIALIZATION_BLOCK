@@ -5,9 +5,12 @@
     <projectFile profileName="WorkerService1">WorkerService1/WorkerService1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e26a1ea5-04c7-41db-a0ef-159772ed007e" name="Changes" comment="добавил функцию вызова из бд объектоа классов и описание животного">
+    <list default="true" id="e26a1ea5-04c7-41db-a0ef-159772ed007e" name="Changes" comment="обработал проверку получения классов начал создававть систему юзер интерфейса">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppTests/AnimalsRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppTests/AnimalsRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/ProgramController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/ProgramController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/View/View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/View/ViewText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/View/ViewText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688557311968</updated>
-      <workItem from="1688557318184" duration="9825000" />
+      <workItem from="1688557318184" duration="15512000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1688557337937</created>
@@ -125,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688563644740</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="обработал проверку получения классов начал создававть систему юзер интерфейса">
+      <created>1688623421983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688623421983</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +160,8 @@
     <MESSAGE value="add tasks" />
     <MESSAGE value="add body of app" />
     <MESSAGE value="добавил функцию вызова из бд объектоа классов и описание животного" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил функцию вызова из бд объектоа классов и описание животного" />
+    <MESSAGE value="обработал проверку получения классов начал создававть систему юзер интерфейса" />
+    <option name="LAST_COMMIT_MESSAGE" value="обработал проверку получения классов начал создававть систему юзер интерфейса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -161,19 +172,6 @@
           </properties>
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/AppTests/AnimalsRepositoryTests.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\workspace\FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK\AppTests\AnimalsRepositoryTests.cs" initialLine="39" containingFunctionPresentation="method 'GetAnimalList_Test'">
-            <startOffsets>
-              <option value="935" />
-            </startOffsets>
-            <endOffsets>
-              <option value="975" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="DotNet Exception Breakpoints" />

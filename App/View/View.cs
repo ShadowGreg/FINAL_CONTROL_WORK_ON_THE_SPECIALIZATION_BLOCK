@@ -1,6 +1,6 @@
 ﻿namespace FINAL_CONTROL_WORK_ON_THE_SPECIALIZATION_BLOCK.View; 
 
-public class View {
+public static class View {
     public static void Print(string item) {
         Console.WriteLine(item);
     }
@@ -9,21 +9,22 @@ public class View {
         Console.WriteLine("\n********************************");
         Console.WriteLine(inText);
         Console.WriteLine("\n********************************");
+        Console.Write("\n>");
     }
 
-    public void PrintMainMenu() {
+    public static void PrintMainMenu() {
         PrintStandardFrame(ViewText.MainMenuText);
     }
 
-    public void PrintCreateAnimalMenu() {
+    public  static void PrintCreateAnimalMenu() {
         PrintStandardFrame(ViewText.CreateAnimalMenuText);
     }
 
-    public void PrintAnimalMenu() {
+    public  static void PrintAnimalMenu() {
         PrintStandardFrame(ViewText.AnimalMenuText);
     }
 
-    public void PrintAnimalCommandsMenu() {
+    public  static void PrintAnimalCommandsMenu() {
         PrintStandardFrame(ViewText.AnimalCommandsMenuText);
     }
 }

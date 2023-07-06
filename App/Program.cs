@@ -4,6 +4,6 @@ public class Program {
     private static readonly ProgramController Controller = new ProgramController(Url);
     public static void Main(string[] args) {
         Controller.Run();
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Благодраю за использование!");
     }
 }
